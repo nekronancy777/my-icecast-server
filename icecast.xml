@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<icecast>
+  <paths>
+    <basedir>/usr</basedir>
+    <logdir>/var/log/icecast2</logdir>
+    <webroot>/usr/share/icecast2/web</webroot>
+    <adminroot>/usr/share/icecast2/admin</adminroot>
+  </paths>
+
+  <hostname>your-radio.example.com</hostname>
+  <limits>
+    <clients>100</clients>
+    <sources>2</sources>
+    <threadpool>5</threadpool>
+  </limits>
+
+  <authentication>
+    <source-password>potatow3dg35</source-password>
+    <relay-password>p0tatow3dges</relay-password>
+    <admin-user>admin</admin-user>
+    <admin-password>p0tat0at0</admin-password>
+  </authentication>
+
+  <listen-socket>
+    <port>8000</port>
+  </listen-socket>
+
+  <fileserve>1</fileserve>
+
+  <mounts>
+    <mount>
+      <mount-name>/stream</mount-name>
+      <max-listeners>100</max-listeners>
+    </mount>
+  </mounts>
+
+  <logging>
+    <accesslog>access.log</accesslog>
+    <errorlog>error.log</errorlog>
+    <loglevel>3</loglevel>
+  </logging>
+</icecast>
